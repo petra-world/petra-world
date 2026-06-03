@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "../MobileNav";
 
 const bookingTypes = [
   {
@@ -41,13 +42,13 @@ export default function BookingPage() {
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,7,13,0.94),rgba(18,7,13,0.88))]" />
 
-        <header className="mx-auto flex w-[min(1120px,100%)] items-center justify-between">
+        <header className="relative z-20 mx-auto flex w-[min(1120px,100%)] items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-2" aria-label="Jentra home">
-            <Image src="/images/logo.svg" width={50} height={50} alt="" />
-            <span className="text-lg font-bold tracking-[0.18em] text-[#ff6aa6]">JENTRA</span>
+            <Image src="/images/logo.svg" width={50} height={50} alt="" className="h-11 w-11 sm:h-[50px] sm:w-[50px]" />
+            <span className="text-lg font-bold tracking-[0.16em] text-[#ff6aa6] sm:tracking-[0.18em]">JENTRA</span>
           </Link>
 
-          <nav className="hidden items-center gap-6 text-sm text-white/70 sm:flex">
+          <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">
             <Link className="hover:text-white" href="/">
               Home
             </Link>
@@ -61,6 +62,8 @@ export default function BookingPage() {
               Sign In
             </Link>
           </nav>
+
+          <MobileNav />
         </header>
 
         <div className="mx-auto w-[min(1120px,100%)] py-16">
