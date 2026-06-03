@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "./MobileNav";
 
 const membershipBenefits = [
   "Fresh members-only photos, videos, and private updates",
@@ -39,10 +40,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,7,13,0.96)_0%,rgba(18,7,13,0.78)_42%,rgba(18,7,13,0.35)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(232,90,142,0.26),transparent_28%),linear-gradient(180deg,rgba(18,7,13,0.1),#12070d_96%)]" />
 
-        <header className="relative z-10 mx-auto flex w-[min(1120px,92vw)] items-center justify-between py-5">
+        <header className="relative z-20 mx-auto flex w-[min(1120px,92vw)] items-center justify-between gap-3 py-5">
           <Link href="/" className="flex items-center gap-2" aria-label="Jentra home">
-            <Image src="/images/logo.svg" width={54} height={54} alt="" />
-            <span className="text-xl font-bold tracking-[0.18em] text-[#ff6aa6]">JENTRA</span>
+            <Image src="/images/logo.svg" width={54} height={54} alt="" className="h-11 w-11 sm:h-[54px] sm:w-[54px]" />
+            <span className="text-lg font-bold tracking-[0.16em] text-[#ff6aa6] sm:text-xl sm:tracking-[0.18em]">JENTRA</span>
           </Link>
 
           <nav className="hidden items-center gap-7 rounded-md border border-white/15 bg-white/8 px-7 py-3 text-sm text-white/82 shadow-2xl shadow-black/20 backdrop-blur-xl md:flex">
@@ -58,19 +59,19 @@ export default function Home() {
             <Link className="transition hover:text-white" href="/booking">
               Booking
             </Link>
-             <Link className="transition hover:text-white" href="/auth/signin">
+            <Link className="transition hover:text-white" href="/auth/signin">
               Sign in
             </Link>
           </nav>
 
-          <div className="flex items-center gap-3">
-           
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link
               href="/subscribe"
-              className="rounded-sm bg-[#e85a8e] px-5 py-3 text-sm font-bold text-white shadow-lg shadow-[#e85a8e]/25 transition hover:bg-[#ff6aa6]"
+              className="rounded-sm bg-[#e85a8e] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-[#e85a8e]/25 transition hover:bg-[#ff6aa6] sm:px-5"
             >
               Subscribe
             </Link>
+            <MobileNav />
           </div>
         </header>
 
