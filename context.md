@@ -4,7 +4,7 @@
 
 This project is a Next.js website for an adult content creator. The site should present her personal brand, sell paid subscriptions, restrict premium content to paying members, and let visitors book her for personal visitation or travel-related appearances.
 
-The current frontend has been reworked into a polished static prototype. It includes public sales pages, auth UI, admin pages, and a shared admin navigation component. The project is not connected to a backend yet.
+The current frontend has been reworked into a polished static prototype. It includes public sales pages, auth UI, admin pages, shared public mobile navigation, and a shared admin navigation component. The project is not connected to a backend yet.
 
 ## Current Stack
 
@@ -21,10 +21,11 @@ Important repo instruction: this project uses a newer/breaking Next.js version. 
 
 ### Built Frontend Pages
 
-- `app/page.tsx`: polished homepage with media hero, brand navigation, `Subscribe`, `Book Visit`, and `Sign In` actions, membership section, content previews, booking section, and subscriber path.
-- `app/subscribe/page.tsx`: subscription page with three plan cards, subscription steps, Telegram verification messaging, and FAQ section. Plan buttons currently route to signup.
-- `app/booking/page.tsx`: booking request UI with booking types, review process, contact/details form, budget/date/duration fields, 18+ confirmation, and safety/privacy confirmation.
-- `app/content/page.tsx`: locked content preview page with content categories, preview cards, subscribe/signin CTAs, member benefits, and private Telegram verification message.
+- `app/page.tsx`: polished homepage with media hero, responsive brand navigation, `Subscribe`, `Book Visit`, and `Sign In` actions, membership section, content previews, booking section, and subscriber path.
+- `app/subscribe/page.tsx`: subscription page with responsive brand navigation, three plan cards, subscription steps, Telegram verification messaging, and FAQ section. Plan buttons currently route to signup.
+- `app/booking/page.tsx`: booking request UI with responsive brand navigation, booking types, review process, contact/details form, budget/date/duration fields, 18+ confirmation, and safety/privacy confirmation.
+- `app/content/page.tsx`: locked content preview page with responsive brand navigation, content categories, preview cards, subscribe/signin CTAs, member benefits, and private Telegram verification message.
+- `app/MobileNav.tsx`: shared client component for public mobile navigation. It renders an accessible hamburger menu linking to Home, Content, Subscribe, Booking, and Sign in. Used by the homepage, subscription page, content page, and booking page.
 - `app/auth/signup/page.tsx`: visual-only signup form with member account messaging, name/email/password fields, and 18+ confirmation.
 - `app/auth/signin/page.tsx`: visual-only signin form for member access. Public copy intentionally does not advertise admin access.
 - `app/admin/dashboard/page.tsx`: admin overview with metrics, booking snapshot, quick actions, content queue, and backend setup checklist.
@@ -39,6 +40,7 @@ Important repo instruction: this project uses a newer/breaking Next.js version. 
 
 - `app/content/page.tsx` now exists and powers the `/content` route.
 - `app/content/pages.tsx` still exists as a harmless placeholder, but it is not the route file. It can be removed later to avoid confusion.
+- Public pages now use shared mobile navigation via `app/MobileNav.tsx`; desktop nav starts at the `md` breakpoint on the updated public headers.
 - All current forms are visual-only. No form submits to a backend yet.
 - Last verified build: `npm run build` passes.
 

@@ -48,7 +48,7 @@ export default function ContentPage() {
         <header className="relative z-20 mx-auto flex w-[min(1120px,100%)] items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-2" aria-label="Jentra home">
             <Image src="/images/logo.svg" width={50} height={50} alt="" className="h-11 w-11 sm:h-[50px] sm:w-[50px]" />
-            <span className="text-lg font-bold tracking-[0.16em] text-[#ff6aa6] sm:tracking-[0.18em]">JENTRA</span>
+            <span className="text-lg font-bold tracking-[0.16em] text-[#ff6aa6] sm:tracking-[0.18em]">PETRA</span>
           </Link>
 
           <nav className="hidden items-center gap-6 text-sm text-white/70 md:flex">

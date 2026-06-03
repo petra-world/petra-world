@@ -43,7 +43,7 @@ export default function Home() {
         <header className="relative z-20 mx-auto flex w-[min(1120px,92vw)] items-center justify-between gap-3 py-5">
           <Link href="/" className="flex items-center gap-2" aria-label="Jentra home">
             <Image src="/images/logo.svg" width={54} height={54} alt="" className="h-11 w-11 sm:h-[54px] sm:w-[54px]" />
-            <span className="text-lg font-bold tracking-[0.16em] text-[#ff6aa6] sm:text-xl sm:tracking-[0.18em]">JENTRA</span>
+            <span className="text-lg font-bold tracking-[0.16em] text-[#ff6aa6] sm:text-xl sm:tracking-[0.18em]">PETRA</span>
           </Link>
 
           <nav className="hidden items-center gap-7 rounded-md border border-white/15 bg-white/8 px-7 py-3 text-sm text-white/82 shadow-2xl shadow-black/20 backdrop-blur-xl md:flex">

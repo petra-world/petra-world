@@ -26,7 +26,7 @@ export default function SignUpPage() {
       <header className="mx-auto flex w-[min(1120px,100%)] items-center justify-between">
         <Link href="/" className="flex items-center gap-2" aria-label="Jentra home">
           <Image src="/images/logo.svg" width={50} height={50} alt="" />
-          <span className="text-lg font-bold tracking-[0.18em] text-[#ff6aa6]">JENTRA</span>
+          <span className="text-lg font-bold tracking-[0.18em] text-[#ff6aa6]">PETRA</span>
         </Link>
 
         <Link className="text-sm font-bold text-white/72 transition hover:text-white" href="/auth/signin">
